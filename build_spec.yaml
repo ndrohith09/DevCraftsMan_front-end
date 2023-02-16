@@ -3,11 +3,12 @@ component: build
 timeoutInSeconds: 1000
 shell: bash
 
-steps: 
+steps:
   - type: Command
-    name: "Build React"
+    name: "Install Yarn Dependencies and Build"
     command: |
-      yarn build
+      npm install
+      npm run build
   - type: Command
     name: "Build Docker Image"
     command: |
