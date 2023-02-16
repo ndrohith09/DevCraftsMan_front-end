@@ -24,7 +24,7 @@ else {
 // console.log(decryptText);
 
 const instance = axios.create({
-  baseURL : 'http://64.227.136.134:8001/',
+  baseURL : 'http://http://144.24.138.153:8001/',
   // baseURL: `${process.env.REACT_APP_API_URL}`,
   headers: {
     // Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmZDEzNDYyIiwiZXhwIjoxNjc1MzA0NjQ5Ljk0NDU5NH0.87dU50BOxgYM91Y7R1ydtE1HPBRu4RM7a_t_ympZcaY",
