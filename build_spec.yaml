@@ -1,0 +1,20 @@
+version: 0.1
+component: build
+timeoutInSeconds: 1000
+shell: bash
+
+steps: 
+  - type: Command
+    name: "Build React"
+    command: |
+      yarn build
+  - type: Command
+    name: "Build Docker Image"
+    command: |
+      docker build -t $REPOSITORY_URI:latest .
+  - type: Command
+    name: "Login to Docker and Push Docker Image"
+    command: |
+      docker login -u  $USERNAME -p $PASSWORD hyd.ocir.io
+      docker tag $REPOSITORY_URI:latest hyd.ocir.io/$NAMESPACE/$REPOSITORY_URI:latest
+      docker push hyd.ocir.io/$NAMESPACE/$REPOSITORY_URI:latest
