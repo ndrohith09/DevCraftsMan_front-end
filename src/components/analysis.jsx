@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import instance from './api/api';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -144,7 +145,7 @@ class Analysis extends Component {
     const { repo } = params; 
 
     const doc = new jsPDF();
-    const text = `Dev Tool \n\n Report Generated for ${repo} \n\n ${this.state.openai} \n\n Thank you for using Dev Tool`;
+    const text = `Dev Craftsman \n\n Report Generated for ${repo} \n\n ${this.state.openai} \n\n Thank you for using DevCraftsman`;
     doc.text(
       20,20, text,
       { maxWidth: 180, align: "left" ,lineHeightFactor: 1.5 , fontSize: 8 , textOverflow: "ellipsis" } 
@@ -164,7 +165,7 @@ class Analysis extends Component {
     const fileNames = [];
     const { files } = this.state;
     // Loop through the files and add the file names to the fileNames list
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < files.length; i++) {
       fileNames.push(files[i].file);
     }
 
@@ -172,7 +173,7 @@ class Analysis extends Component {
 
     try {
       await instance({
-          url: '/generate' ,
+          url: '/generate-multiple' ,
           method: 'POST',
           data: {
             gh_token: gh_access_token,
@@ -224,6 +225,19 @@ class Analysis extends Component {
         title: {
           display: true,
           text: 'Visitors',
+        },
+      },
+    }; 
+
+    const cOptions = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Clones',
         },
       },
     }; 
@@ -500,14 +514,19 @@ class Analysis extends Component {
                   ],
                 }
               } 
-              options={vOptions} /> 
+              options={cOptions} /> 
             </Box>
             <br />
             <br />
           </GridItem>
         </Grid>
          } 
+
+         <br />
         </Container>
+        <br /> 
+        
+    
       </Box>
     );
   }

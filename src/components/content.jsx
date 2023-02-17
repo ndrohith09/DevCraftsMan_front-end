@@ -178,6 +178,7 @@ class Content extends Component {
           <Text fontSize="2xl" fontWeight="bold">
             Summary your code
           </Text>
+
           {pushing ? 
                 <Progress size="xs" isIndeterminate />
               : null}
@@ -303,6 +304,10 @@ class Content extends Component {
               ) : null}
             </GridItem>
           </Grid>
+
+          <br />
+
+           
         </Container>  
       </Box>
     );

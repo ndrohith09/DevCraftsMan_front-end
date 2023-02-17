@@ -116,7 +116,7 @@ class Home extends Component {
 
   githubAuth = async e => {
     e.preventDefault();
-    window.location.href = 'http://144.24.138.153:8001/gh-authorize';
+    window.location.href = 'http://129.154.45.139/gh-authorize';
   };
 
   render() {
