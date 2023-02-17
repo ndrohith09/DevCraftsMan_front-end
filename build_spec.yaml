@@ -18,7 +18,7 @@ steps:
     command: |
       docker login -u  $DOC_USERNAME -p $DOC_PASSWORD
       docker tag $REPOSITORY_URI:latest $DOC_USERNAME/$REPOSITORY_URI:latest
-      docker push $DOC_USERNAME:latest
+      docker push $DOC_USERNAME/$REPOSITORY_URI:latest
   - type: Command
     name: "Login to Docker and Push Docker Image"
     command: |
