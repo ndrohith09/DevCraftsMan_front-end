@@ -1,21 +1,25 @@
 # alphine nginx image 
-# FROM nginx:1.19.0-alpine
-# COPY build/ /usr/share/nginx/html
+FROM nginx:1.19.0-alpine
+COPY build/ /usr/share/nginx/html
 
 # pull the base image
-FROM node:latest
+# FROM node:alpine
 
-WORKDIR /app
+# # set the working direction
+# WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+# # add `/app/node_modules/.bin` to $PATH
+# ENV PATH /app/node_modules/.bin:$PATH
 
-RUN npm install
+# # install app dependencies
+# COPY package.json ./
 
-COPY . .
+# # COPY package-lock.json ./
 
-RUN npm run build
+# RUN npm install
 
-EXPOSE 3000
+# # add app
+# COPY . ./
 
-CMD ["npm", "run", "start"]
+# # start app
+# CMD ["npm","run", "start"]
