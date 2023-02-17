@@ -1,7 +1,7 @@
 # alphine nginx image 
 FROM nginx:1.19.0-alpine
 COPY build/ /usr/share/nginx/html
-
+COPY nginx.conf /etc/nginx/nginx.conf
 # pull the base image
 # FROM node:alpine
 
