@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  reactjs:
+    build: ./
+    # image: <image_name>
+    ports:
+      - 80:80
