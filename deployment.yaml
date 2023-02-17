@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: devcraftsman-ui
-          image: hyd.ocir.io/$NAMESPACE/$REPOSITORY_URI
+          image: $DOC_USERNAME/$REPOSITORY_URI:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
