@@ -1,6 +1,8 @@
 # DevCraftsMan
 Try out the application at: http://152.70.64.98/
 
+[![Blinking LEDs](http://img.youtube.com/vi/aTLsB5ZAysc/0.jpg)](http://www.youtube.com/watch?v=aTLsB5ZAysc "Application")
+
 ## Inspiration
 Developers often face challenges in understanding the usage patterns and performance characteristics of their code, and may also struggle to identify and fix errors in their codebase. This can lead to inefficiencies, errors, and bugs in the software. Therefore, there is a need for a tool that can assist developers in tracking data metrics, visualizing them, and generating summaries of code snippets. Additionally, such a tool should be able to identify bugs and measure the complexity of the code. By providing developers with these capabilities, DevCraftsman aims to address these challenges by providing a suite of features that can assist developers in identifying bugs, visualizing data metrics, and understanding the code. It can help improve the quality, performance, and maintainability of their codebase, ultimately resulting in better software solutions.
 
