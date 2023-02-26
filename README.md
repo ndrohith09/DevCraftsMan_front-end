@@ -1,4 +1,4 @@
-# DevCraftsMan
+# DevCraftsMan [Frontend Code]
 Try out the application at: http://152.70.64.98/
 
 [![Blinking LEDs](http://img.youtube.com/vi/aTLsB5ZAysc/0.jpg)](http://www.youtube.com/watch?v=aTLsB5ZAysc "Application")
